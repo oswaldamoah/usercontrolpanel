@@ -1,5 +1,4 @@
-import { useState } from 'react'
-import ReactDOM from 'react-dom/client';
+import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Dashboard from './components/Dashboard'
@@ -7,14 +6,12 @@ import Header from './components/Header'
 import Login from './components/Login'
 import Preferences from './components/Preferences'
 import SessionInfo from './components/SessionInfo'
+import NotFound from './components/NotFound'
 
 import './App.css'
 
 function App() {
-const root = ReactDOM.createRoot(document.getElementById('root'));
-
-root.render(
-  <React.StrictMode>
+  return (
     <BrowserRouter>
       <Routes>
         {/* Define individual routes */}
@@ -27,13 +24,7 @@ root.render(
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
-  </React.StrictMode>
-);
-  return (
-    <>
-      
-    </>
-  )
+  );
 }
 
 export default App

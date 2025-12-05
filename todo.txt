@@ -1,0 +1,1 @@
+now getcookie that saves it as a prop so it can be used in dashboard. usecontext
